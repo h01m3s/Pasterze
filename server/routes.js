@@ -3,10 +3,10 @@ const productController = require('./controllers/products');
 const QAController = require('./controllers/QA');
 const reviewController = require('./controllers/reviews');
 
-router.get('/products/list', productController.init);
-router.get('/products/:product_id', productController.init);
-router.get('/products/:product_id/styles', productController.init);
-router.get('/products/:product_id/related', productController.init);
+router.get('/products/list', productController.productList);
+router.get('/products/:product_id', productController.productInfo);
+router.get('/products/:product_id/styles', productController.productStyles);
+router.get('/products/:product_id/related', productController.relatedProducts);
 router.get('/qa/:product_id', QAController.getQuestions);
 router.get('/qa/:question_id/answers', QAController.getAnswers);
 router.post('/qa/:product_id', QAController.postQuestion);
