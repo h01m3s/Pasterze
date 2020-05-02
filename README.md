@@ -48,6 +48,10 @@ A video summary of this process can be found here: https://drive.google.com/file
 
 _Developed by Ryan Fulmer_
 
+The Reviews API provides a data interface for the Reviews section of an e-commerce product page. The database is driven by 
+Cassandra DB, and is clustered by product_id in partition keys for fast and stable queries. 
+Although there is a fair amount of server logic to clean data from reads/for writes, the actual query time remains very fast due to the optimization done by the Cassandra database. 
+
 ## Getting Started
 
 This project can be run by executing the following steps:
